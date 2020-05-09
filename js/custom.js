@@ -26,6 +26,11 @@
     });    
   });
 
+  $(document).ready(function(){
 
-    
+    $("#submit-button").on('click', function(e){
+      debugger
+      $("#submit-message").toggle();
+    })
 
+  })

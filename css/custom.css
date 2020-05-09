@@ -1,0 +1,11 @@
+.bg-overlay {
+    /* background: none; */
+}
+.brand-link-text {
+    color: #7fb4f1;
+}
+@media only screen and (max-width: 600px) { 
+    .navbar-brand {
+        font-size: var(--h6-font-size);
+    }
+}
