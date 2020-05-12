@@ -34,6 +34,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
     --primary-color:        #f13a11;
     --white-color:          #ffffff;
     --dark-color:           #171819;
+    --hear-banner-overlay-color: #171819d6;
     --about-bg-color:       #f9f9f9;
 
     --gray-color:           #909090;
@@ -211,7 +212,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
   /* BG OVERLAY */
 
   .bg-overlay {
-    background: var(--dark-color);
+    background: var(--hear-banner-overlay-color);
     position: absolute;
     top: 0;
     right: 0;
