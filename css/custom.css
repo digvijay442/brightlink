@@ -8,4 +8,13 @@
     .navbar-brand {
         font-size: var(--h6-font-size);
     }
+    .logo {
+        left: -7px;
+    }
+}
+
+.logo {
+    position: absolute;
+    top: -14px;
+    height: 95px;
 }
