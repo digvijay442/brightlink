@@ -9,12 +9,13 @@
         font-size: var(--h6-font-size);
     }
     .logo {
-        left: -7px;
+        left: 21px;
     }
 }
 
 .logo {
     position: absolute;
-    top: -14px;
-    height: 95px;
+    top: 3px;
+    height: 90%;
+    border-radius: 50%;
 }
