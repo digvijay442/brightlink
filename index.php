@@ -75,11 +75,12 @@ https://www.tooplate.com/view/2119-gymso-fitness
         </div>
     </nav>
 
-
+    <div id="alert">
+    </div>
     <!-- HERO -->
     <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
 
-        <div class="bg-overlay"></div>
+        <!-- <div class="bg-overlay"></div> -->
 
         <div class="container">
             <div class="row">
@@ -458,15 +459,15 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 <div class="ml-auto col-lg-5 col-md-6 col-12">
                     <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200">Feel free to ask anything</h2>
 
-                    <form action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400"
+                    <form class="contact-form webform" id="contact-form" data-aos="fade-up" data-aos-delay="400"
                         role="form">
                         <input type="text" class="form-control" name="cf-name" placeholder="Name">
 
-                        <input type="email" class="form-control" name="cf-email" placeholder="Email">
+                        <input type="text" class="form-control" name="cf-email" placeholder="Contact">
 
                         <textarea class="form-control" rows="5" name="cf-message" placeholder="Message"></textarea>
 
-                        <button type="button" class="form-control" id="submit-button" name="submit">Send Message</button>
+                        <button type="submit" class="form-control" id="submit-button" name="submit">Send Message</button>
                     </form>
                     <p id="submit-message" class="text-warning" style="display: none;">we are under maintenance. Please reach us at <a href="tel:9625611966">+91 9625611966</a></p>
                 </div>

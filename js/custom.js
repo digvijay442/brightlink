@@ -27,10 +27,48 @@
   });
 
   $(document).ready(function(){
-
+    holdTextBeforeLoader = "";
     $("#submit-button").on('click', function(e){
-      debugger
-      $("#submit-message").toggle();
+      var $btn = $(this);
+      showLoader($btn);
+      e.preventDefault();
+        $.ajax({
+            url: 'email/email.php',
+            type: 'POST',
+            data: $('#contact-form').serialize(),
+            success: function(msg) {
+                hideLoader($btn);
+                $('#contact-form').trigger('reset');
+                showSuccess('Thanks for reaching us, We will get back to you soon.');
+            },
+            error: function(err) {
+              showError();
+              hideLoader();
+            }
+        });
     })
 
-  })
+  });
+
+  function showLoader($btn) {
+    holdTextBeforeLoader = $btn.text();
+    $btn.html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...').attr('disabled', true);
+  }
+  
+  function hideLoader($btn) {
+    $btn.html(holdTextBeforeLoader).removeAttr('disabled');
+  }
+
+function showSuccess(msg) {
+  $('#alert').html('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> '+msg+'</div>');
+  setTimeout(function(){
+    $('#alert').html('');
+  },5000);
+}
+
+function showError(msg) {
+  $('#alert').html('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error!</strong> Please try again later.</div>');
+  setTimeout(function(){
+    $('#alert').html('');
+  },5000);
+}

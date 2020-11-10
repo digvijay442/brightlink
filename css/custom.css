@@ -19,3 +19,32 @@
     height: 61px;
     border-radius: 50%;
 }
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    display:table;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 999;
+}
+#overlay i {
+   display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+.spin-big {
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+}
+#alert {
+    position: fixed;
+    right: 5px;
+    top: 70px;
+    z-index: 5;
+}
+
+*:disabled, button#submit-button:disabled {
+    background: grey;
+}
